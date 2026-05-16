@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anarch Development - We make Minecraft Windows 10 Edition beta 0.15.10 clients">
+    <title>Anarch Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="topbar">
+        <div class="container nav-content">
+            <a href="#" class="logo-container">
+                <img src="assets/anarch_dark.png" alt="Anarch Development" id="brand-logo" class="brand-logo">
+            </a>
+            
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                        <span data-i18n="nav_clients">Clients</span> <i data-lucide="chevron-down" class="icon-sm"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#amatayakul" class="dropdown-item">
+                            <img src="assets/Amatayakul.png" alt="" class="client-icon">
+                            <span data-i18n="client_amatayakul">Amatayakul Client</span>
+                        </a>
+                        <a href="#aegleseeker" class="dropdown-item">
+                            <img src="assets/Aegleseeker.png" alt="" class="client-icon">
+                            <span data-i18n="client_aegleseeker">Aegleseeker Client</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://discord.gg/3fJ9gKq98Q" target="_blank" rel="noopener noreferrer" class="nav-link hover-underline" data-i18n="nav_discord">Discord</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                        <i data-lucide="globe" class="icon-sm"></i> <span id="current-lang">ES</span> <i data-lucide="chevron-down" class="icon-sm"></i>
+                    </button>
+                    <div class="dropdown-content" style="min-width: 120px;">
+                        <a href="#" class="dropdown-item lang-selector" data-lang="es">Español</a>
+                        <a href="#" class="dropdown-item lang-selector" data-lang="en">English</a>
+                        <a href="#" class="dropdown-item lang-selector" data-lang="pt">Português</a>
+                    </div>
+                </div>
+
+                <button id="theme-toggle" class="icon-btn theme-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn icon-btn" aria-label="Open menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="mobile-title" data-i18n="mobile_menu">Menú</span>
+                <button class="mobile-close-btn icon-btn" aria-label="Close menu">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="mobile-links">
+                <div class="mobile-group-title" data-i18n="nav_clients">Clients</div>
+                <a href="#amatayakul" class="mobile-item">
+                    <img src="assets/Amatayakul.png" alt="" class="client-icon">
+                    <span data-i18n="client_amatayakul">Amatayakul Client</span>
+                </a>
+                <a href="#aegleseeker" class="mobile-item">
+                    <img src="assets/Aegleseeker.png" alt="" class="client-icon">
+                    <span data-i18n="client_aegleseeker">Aegleseeker Client</span>
+                </a>
+                <div class="mobile-divider"></div>
+                <div class="mobile-group-title">Idioma</div>
+                <div style="display: flex; gap: 8px; padding: 0 16px; margin-bottom: 16px;">
+                    <button class="btn btn-outline lang-selector" data-lang="es" style="padding: 6px 12px; font-size: 0.9rem;">ES</button>
+                    <button class="btn btn-outline lang-selector" data-lang="en" style="padding: 6px 12px; font-size: 0.9rem;">EN</button>
+                    <button class="btn btn-outline lang-selector" data-lang="pt" style="padding: 6px 12px; font-size: 0.9rem;">PT</button>
+                </div>
+                <div class="mobile-divider"></div>
+                <a href="https://discord.gg/3fJ9gKq98Q" target="_blank" rel="noopener noreferrer" class="mobile-item">
+                    <svg width="24" height="24" viewBox="0 0 127.14 96.36" style="margin-right:0; fill: currentColor;" xmlns="http://www.w3.org/2000/svg"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.31,60,73.31,53s5-12.74,11.43-12.74S96.3,46,96.19,53,91.08,65.69,84.69,65.69Z"/></svg>
+                    <span data-i18n="nav_discord">Discord</span>
+                </a>
+                <button id="mobile-theme-toggle" class="mobile-item">
+                    <i data-lucide="sun" class="sun-icon-mobile" style="width: 24px; height: 24px; margin-right: 0;"></i>
+                    <span class="theme-text-mobile" data-i18n="theme_dark">Cambiar a Oscuro</span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-overlay"></div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero glass-effect fade-in-up">
+            <div class="hero-content">
+                <div class="badge" data-i18n="hero_badge">Bienvenido a</div>
+                <h1 class="gradient-text">Anarch Development</h1>
+                <p class="bio text-muted" data-i18n="hero_bio">Hacemos clients para Minecraft Windows 10 Edition beta 0.15.10 lol</p>
+                <div class="hero-actions">
+                    <a href="#clients" class="btn btn-primary" data-i18n="hero_btn_clients">Ver Clients</a>
+                    <a href="https://discord.gg/3fJ9gKq98Q" target="_blank" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.31,60,73.31,53s5-12.74,11.43-12.74S96.3,46,96.19,53,91.08,65.69,84.69,65.69Z"/></svg>
+                        <span data-i18n="hero_btn_discord">Únete a Discord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="clients-section container fade-in-up delay-1">
+            <h2 class="section-title" data-i18n="clients_title">Nuestros Clients</h2>
+            <div class="grid-2">
+                <div class="card client-card" id="amatayakul">
+                    <div class="card-img-wrapper">
+                        <img src="assets/Amatayakul.png" alt="Amatayakul Client Logo" class="card-logo">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="client_amatayakul">Amatayakul Client</h3>
+                        <p class="text-muted" data-i18n="amatayakul_desc">Un client de utilidad PvP legítimo enfocado en el rendimiento y en mejorar tu experiencia de juego vanilla.</p>
+                        <a href="https://github.com/Aztral-Network/AmatayakulLauncher" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><span data-i18n="btn_get_client">Obtener Client</span> <i data-lucide="arrow-right" class="icon-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="card client-card" id="aegleseeker">
+                    <div class="card-img-wrapper">
+                        <img src="assets/Aegleseeker.png" alt="Aegleseeker Client Logo" class="card-logo">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="client_aegleseeker">Aegleseeker Client</h3>
+                        <p class="text-muted" data-i18n="aegleseeker_desc">Un poderoso client hackeado con reach, expansión de hitbox y otros módulos para dominar la competencia.</p>
+                        <a href="https://github.com/iVyz3r/aegledll" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><span data-i18n="btn_get_client">Obtener Client</span> <i data-lucide="arrow-right" class="icon-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discord-section container fade-in-up delay-2">
+            <h2 class="section-title" data-i18n="community_title">Comunidad</h2>
+            <div class="card discord-card">
+                <div class="discord-info">
+                    <h3 data-i18n="discord_join_title">Únete a Anarch Development</h3>
+                    <p class="text-muted" data-i18n="discord_desc">Conéctate con nuestros desarrolladores, obtén soporte y chatea con otros miembros.</p>
+                    <a href="https://discord.gg/3fJ9gKq98Q" target="_blank" class="btn btn-primary mt-4">
+                        <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.31,60,73.31,53s5-12.74,11.43-12.74S96.3,46,96.19,53,91.08,65.69,84.69,65.69Z"/></svg> 
+                        <span data-i18n="btn_open_discord">Abrir Discord</span>
+                    </a>
+                </div>
+                <div class="discord-widget-wrapper">
+                    <iframe src="https://discord.com/widget?id=1503215502959317103&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" class="discord-widget"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> <span data-i18n="footer_text">Anarch Development. Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
