@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información del Aegleseeker Client de Anarch Development">
+    <title>Aegleseeker Client - Anarch Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="assets/an4rch.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-container">
+                <img src="assets/anarch_dark.png" alt="Anarch Development" id="brand-logo" class="brand-logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link hover-underline" data-i18n="nav_home">Inicio</a>
+                <a href="https://discord.gg/3fJ9gKq98Q" target="_blank" rel="noopener noreferrer" class="nav-link hover-underline" data-i18n="nav_discord">Discord</a>
+                <div class="dropdown">
+                    <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                        <i data-lucide="globe" class="icon-sm"></i>
+                        <span id="current-lang">ES</span>
+                        <i data-lucide="chevron-down" class="icon-sm"></i>
+                    </button>
+                    <div class="dropdown-content" style="min-width: 120px;">
+                        <a href="#" class="dropdown-item lang-selector" data-lang="es">Español</a>
+                        <a href="#" class="dropdown-item lang-selector" data-lang="en">English</a>
+                        <a href="#" class="dropdown-item lang-selector" data-lang="pt">Português</a>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="icon-btn theme-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero glass-effect fade-in-up">
+            <div class="hero-content">
+                <div class="badge" data-i18n="info_badge">Info Client</div>
+                <h1 class="gradient-text" data-i18n="client_aegleseeker">Aegleseeker Client</h1>
+                <p class="bio text-muted" data-i18n="info_description_aegleseeker">Aegleseeker es un framework interno que hookea DirectX 11 y muestra una interfaz ImGui en el juego. Está construido con una arquitectura modular y ofrece features avanzadas como reach, hitbox, AutoSprint y visuales como Motion Blur y FPS overlay.</p>
+                <div class="hero-actions">
+                    <a href="index.html" class="btn btn-primary" data-i18n="info_back">Volver</a>
+                    <a href="https://github.com/AnarchDevelopment/aegledll" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="info_repo_button">Repo oficial</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients-section container fade-in-up delay-1">
+            <h2 class="section-title" data-i18n="info_details_title">Detalles</h2>
+            <div class="card info-card">
+                <div class="card-body">
+                    <h3 data-i18n="info_repo_features_title">Características del repo</h3>
+                    <p class="text-muted" data-i18n="info_details_text_aegleseeker">El repositorio describe a Aegleseeker como un cliente interno con gancho de DirectX 11, interfaz ImGui y un sistema de módulos completo para combate, movimiento, visuales y utilidades.</p>
+                    <p class="text-muted"><strong data-i18n="info_license_label">Licencia:</strong> an4rch Development Public Source License (ADPSL) v1.0</p>
+                    <ul>
+                        <li data-i18n="info_item_dx11_hook">Hook de DirectX 11 con acceso a frame-level</li>
+                        <li data-i18n="info_item_imgui">Interfaz ImGui arrastrable y con pestañas</li>
+                        <li data-i18n="info_item_modularity">Modularidad: Combat, Movement, Visuals, Misc</li>
+                        <li data-i18n="info_item_features">Funciones clave: Reach, Hitbox, AutoSprint, Timer, FullBright, Unlock FPS, Motion Blur</li>
+                        <li data-i18n="info_item_visuals">Visuales avanzados: Render Info, Keystrokes, Watermark</li>
+                        <li data-i18n="info_item_requirements">Requiere Windows 10+ x64 y GPU compatible con DirectX 11</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Anarch Development. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

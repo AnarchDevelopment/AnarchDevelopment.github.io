@@ -14,6 +14,8 @@ const mobileThemeIcon = document.querySelector('.sun-icon-mobile');
 const mobileThemeText = document.querySelector('.theme-text-mobile');
 const currentLangDisplay = document.getElementById('current-lang');
 const langSelectors = document.querySelectorAll('.lang-selector');
+const desktopThemeIcon = document.querySelector('.sun-icon');
+const desktopMoonIcon = document.querySelector('.moon-icon');
 
 // Translations
 const translations = {
@@ -37,6 +39,28 @@ const translations = {
         discord_join_title: "Únete a Anarch Development",
         discord_desc: "Conéctate con nuestros desarrolladores, obtén soporte y chatea con otros miembros.",
         btn_open_discord: "Abrir Discord",
+        nav_home: "Inicio",
+        info_badge: "Info Client",
+        info_description_amatayakul: "Amatayakul es un client para Minecraft Windows 10 Edition Beta 0.15.10, diseñado específicamente para esta versión. El proyecto oficial recomienda reportar bugs en Discord a zhenrikepvp_ (Henrike).",
+        info_description_aegleseeker: "Aegleseeker es un framework interno que hookea DirectX 11 y muestra una interfaz ImGui en el juego. Ofrece una arquitectura modular con features avanzadas como reach, hitbox, AutoSprint, Motion Blur y FPS overlay.",
+        info_back: "Volver",
+        info_repo_button: "Repo oficial",
+        info_details_title: "Detalles",
+        info_official_details_title: "Detalles oficiales",
+        info_details_text_amatayakul: "El repo de Amatayakul describe el proyecto como un client específico para Minecraft Windows 10 Edition Beta 0.15.10. La información oficial del proyecto lo posiciona como una versión adaptada a esa build de MCPE.",
+        info_item_mcpe_version: "Cliente para Minecraft Windows 10 Edition Beta 0.15.10",
+        info_item_compatibility: "Enfocado en compatibilidad con la versión beta indicada",
+        info_item_bug_report: "Se recomienda reportar bugs en Discord a zhenrikepvp_ (Henrike)",
+        info_item_repo: "Repo oficial: AnarchDevelopment/AmatayakulDLL",
+        info_repo_features_title: "Características del repo",
+        info_details_text_aegleseeker: "El repositorio describe a Aegleseeker como un cliente interno con gancho de DirectX 11, interfaz ImGui y un sistema de módulos completo para combate, movimiento, visuales y utilidades.",
+        info_license_label: "Licencia:",
+        info_item_dx11_hook: "Hook de DirectX 11 con acceso a frame-level",
+        info_item_imgui: "Interfaz ImGui arrastrable y con pestañas",
+        info_item_modularity: "Modularidad: Combat, Movement, Visuals, Misc",
+        info_item_features: "Funciones clave: Reach, Hitbox, AutoSprint, Timer, FullBright, Unlock FPS, Motion Blur",
+        info_item_visuals: "Visuales avanzados: Render Info, Keystrokes, Watermark",
+        info_item_requirements: "Requiere Windows 10+ x64 y GPU compatible con DirectX 11",
         footer_text: "Anarch Development. Todos los derechos reservados."
     },
     en: {
@@ -59,6 +83,28 @@ const translations = {
         discord_join_title: "Join Anarch Development",
         discord_desc: "Connect with our developers, get support, and chat with other members.",
         btn_open_discord: "Open Discord",
+        nav_home: "Home",
+        info_badge: "Client Info",
+        info_description_amatayakul: "Amatayakul is a client for Minecraft Windows 10 Edition Beta 0.15.10, designed specifically for this version. The official project recommends reporting bugs on Discord to zhenrikepvp_ (Henrike).",
+        info_description_aegleseeker: "Aegleseeker is an internal framework that hooks DirectX 11 and shows an in-game ImGui interface. It provides a modular architecture with advanced features like reach, hitbox, AutoSprint, Motion Blur, and FPS overlay.",
+        info_back: "Back",
+        info_repo_button: "Official repo",
+        info_details_title: "Details",
+        info_official_details_title: "Official details",
+        info_details_text_amatayakul: "The Amatayakul repo describes the project as a client specific to Minecraft Windows 10 Edition Beta 0.15.10. The official project information positions it as a version adapted to that MCPE build.",
+        info_item_mcpe_version: "Client for Minecraft Windows 10 Edition Beta 0.15.10",
+        info_item_compatibility: "Focused on compatibility with the specified beta version",
+        info_item_bug_report: "Report bugs on Discord to zhenrikepvp_ (Henrike)",
+        info_item_repo: "Official repo: AnarchDevelopment/AmatayakulDLL",
+        info_repo_features_title: "Repo features",
+        info_details_text_aegleseeker: "The repository describes Aegleseeker as an internal client with a DirectX 11 hook, ImGui interface, and a full module system for combat, movement, visuals, and utilities.",
+        info_license_label: "License:",
+        info_item_dx11_hook: "DirectX 11 hook with frame-level access",
+        info_item_imgui: "Draggable ImGui interface with tabs",
+        info_item_modularity: "Modularity: Combat, Movement, Visuals, Misc",
+        info_item_features: "Key features: Reach, Hitbox, AutoSprint, Timer, FullBright, Unlock FPS, Motion Blur",
+        info_item_visuals: "Advanced visuals: Render Info, Keystrokes, Watermark",
+        info_item_requirements: "Requires Windows 10+ x64 and a DirectX 11 compatible GPU",
         footer_text: "Anarch Development. All rights reserved."
     },
     pt: {
@@ -81,6 +127,28 @@ const translations = {
         discord_join_title: "Junte-se à Anarch Development",
         discord_desc: "Conecte-se com nossos desenvolvedores, obtenha suporte e converse com outros membros.",
         btn_open_discord: "Abrir Discord",
+        nav_home: "Início",
+        info_badge: "Info do Client",
+        info_description_amatayakul: "Amatayakul é um client para Minecraft Windows 10 Edition Beta 0.15.10, projetado especificamente para esta versão. O projeto oficial recomenda relatar bugs no Discord para zhenrikepvp_ (Henrike).",
+        info_description_aegleseeker: "Aegleseeker é um framework interno que hookeia DirectX 11 e exibe uma interface ImGui no jogo. Ele oferece uma arquitetura modular com recursos avançados como reach, hitbox, AutoSprint, Motion Blur e overlay de FPS.",
+        info_back: "Voltar",
+        info_repo_button: "Repositório oficial",
+        info_details_title: "Detalhes",
+        info_official_details_title: "Detalhes oficiais",
+        info_details_text_amatayakul: "O repo de Amatayakul descreve o projeto como um client específico para Minecraft Windows 10 Edition Beta 0.15.10. A informação oficial do projeto o posiciona como uma versão adaptada para essa build do MCPE.",
+        info_item_mcpe_version: "Client para Minecraft Windows 10 Edition Beta 0.15.10",
+        info_item_compatibility: "Focado em compatibilidade com a versão beta indicada",
+        info_item_bug_report: "Recomenda-se relatar bugs no Discord para zhenrikepvp_ (Henrike)",
+        info_item_repo: "Repositório oficial: AnarchDevelopment/AmatayakulDLL",
+        info_repo_features_title: "Recursos do repo",
+        info_details_text_aegleseeker: "O repositório descreve o Aegleseeker como um client interno com hook de DirectX 11, interface ImGui e um sistema completo de módulos para combate, movimento, visuais e utilitários.",
+        info_license_label: "Licença:",
+        info_item_dx11_hook: "Hook de DirectX 11 com acesso em nível de frame",
+        info_item_imgui: "Interface ImGui arrastável com abas",
+        info_item_modularity: "Modularidade: Combat, Movement, Visuals, Misc",
+        info_item_features: "Funcionalidades principais: Reach, Hitbox, AutoSprint, Timer, FullBright, Unlock FPS, Motion Blur",
+        info_item_visuals: "Visuais avançados: Render Info, Keystrokes, Watermark",
+        info_item_requirements: "Requer Windows 10+ x64 e GPU compatível com DirectX 11",
         footer_text: "Anarch Development. Todos os direitos reservados."
     }
 };
@@ -113,12 +181,20 @@ function initTheme() {
 function applyTheme() {
     if (isDarkTheme) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        brandLogo.src = 'assets/anarch_dark.png';
-        discordWidget.src = 'https://discord.com/widget?id=1503215502959317103&theme=dark';
+        if (brandLogo) {
+            brandLogo.src = 'assets/anarch_dark.png';
+        }
+        if (discordWidget) {
+            discordWidget.src = 'https://discord.com/widget?id=1503215502959317103&theme=dark';
+        }
         
         // Update Icons for Desktop
-        document.querySelector('.sun-icon').style.display = 'none';
-        document.querySelector('.moon-icon').style.display = 'block';
+        if (desktopThemeIcon) {
+            desktopThemeIcon.style.display = 'none';
+        }
+        if (desktopMoonIcon) {
+            desktopMoonIcon.style.display = 'block';
+        }
 
         // Update Icons for Mobile
         if(mobileThemeIcon) {
@@ -130,12 +206,20 @@ function applyTheme() {
 
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        brandLogo.src = 'assets/anarch_light.png';
-        discordWidget.src = 'https://discord.com/widget?id=1503215502959317103&theme=light';
+        if (brandLogo) {
+            brandLogo.src = 'assets/anarch_light.png';
+        }
+        if (discordWidget) {
+            discordWidget.src = 'https://discord.com/widget?id=1503215502959317103&theme=light';
+        }
         
         // Update Icons for Desktop
-        document.querySelector('.sun-icon').style.display = 'block';
-        document.querySelector('.moon-icon').style.display = 'none';
+        if (desktopThemeIcon) {
+            desktopThemeIcon.style.display = 'block';
+        }
+        if (desktopMoonIcon) {
+            desktopMoonIcon.style.display = 'none';
+        }
 
         // Update Icons for Mobile
         if(mobileThemeIcon) {
@@ -164,27 +248,35 @@ function toggleTheme() {
 }
 
 // Event Listeners
-themeToggleBtn.addEventListener('click', toggleTheme);
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+}
 if(mobileThemeToggleBtn) {
     mobileThemeToggleBtn.addEventListener('click', toggleTheme);
 }
 
 // Mobile Menu
 function openMobileMenu() {
-    mobileMenu.classList.add('active');
-    mobileOverlay.classList.add('active');
+    if (mobileMenu) mobileMenu.classList.add('active');
+    if (mobileOverlay) mobileOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 
 function closeMobileMenu() {
-    mobileMenu.classList.remove('active');
-    mobileOverlay.classList.remove('active');
+    if (mobileMenu) mobileMenu.classList.remove('active');
+    if (mobileOverlay) mobileOverlay.classList.remove('active');
     document.body.style.overflow = '';
 }
 
-mobileMenuBtn.addEventListener('click', openMobileMenu);
-mobileCloseBtn.addEventListener('click', closeMobileMenu);
-mobileOverlay.addEventListener('click', closeMobileMenu);
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+}
+if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', closeMobileMenu);
+}
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+}
 
 // i18n Functions
 function setLanguage(lang) {
