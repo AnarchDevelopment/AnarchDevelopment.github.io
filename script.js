@@ -168,6 +168,10 @@ function initTheme() {
         isDarkTheme = true;
     }
 
+    if (!savedTheme) {
+        localStorage.setItem('anarch-theme', 'dark');
+    }
+
     // i18n Initialization
     const savedLang = localStorage.getItem('anarch-lang');
     if (savedLang && translations[savedLang]) {
